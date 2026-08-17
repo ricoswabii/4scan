@@ -10,7 +10,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 
 # ============================================================
-# 4SCAN — Lightweight TCP Port Scanner
+# 4SCAN — Simple Lightweight TCP Port Scanner
 # by ric0swab11
 # ============================================================
 
