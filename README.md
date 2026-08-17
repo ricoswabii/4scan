@@ -89,7 +89,3 @@ Only scan systems and networks that you own or have explicit permission to test.
 
 Unauthorized port scanning may violate organizational policies, terms of service, or applicable laws.
 
-⚡ 4SCAN
-
-Learn • Scan • Analyze • Improve
-
