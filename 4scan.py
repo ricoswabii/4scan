@@ -11,7 +11,7 @@ from datetime import datetime
 
 # ============================================================
 # 4SCAN — Lightweight TCP Port Scanner
-# by ricoswabii
+# by ric0swab11
 # ============================================================
 
 BANNER = r"""
@@ -690,7 +690,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
 
         print(
-            f"\n{YELLOW}[!] Exiting 4SCAN...{RESET}"
+            f"\n{YELLOW}[!] Exiting scan...{RESET}"
         )
 
         sys.exit(0)
