@@ -1,49 +1,95 @@
-# 🔍 4SCAN — Simple Python Port Scanner
+# 4SCAN
 
-4SCAN is a lightweight Python-based port scanner built for learning networking and socket programming.
+### Lightweight TCP Port Scanner
 
-## ⚠️ Disclaimer
-For educational and authorized testing only. Do not scan systems without permission.
+A simple Python-based TCP port scanner built for **network security learning, authorized testing, and homelab use**.
 
----
+## ⚡ Features
 
-## 🚀 Features
-- TCP port scanning
-- Custom port range input
-- Real-time open port detection
-- Lightweight and beginner-friendly
+- 🔍 TCP port scanning
+- ⚡ Multithreaded scanning
+- 🎯 IP address & hostname support
+- 🔢 Custom ports and port ranges
+- 📡 Common service detection
+- ⏱️ Port response-time measurement
+- 📊 Scan progress & statistics
+- 🚀 Scan speed calculation
+- 🔓 Open-port filtering
+- 🎨 Colored terminal interface
+- 💾 JSON & CSV export
+- 🛑 Graceful `Ctrl+C` handling
+- 🆘 Built-in CLI help
 
----
+## 🛠️ Usage
 
-## 🛠️ How to Use
-
-Run the script:
+Scan a port range:
 
 ```bash
-python scanner.py
+python3 4scan.py -t 192.168.1.1 -p 1-1000
 
-Then input:
+Scan specific ports:
 
-Target IP or domain (example: 127.0.0.1)
-Start port (example: 20)
-End port (example: 1000)
+python3 4scan.py -t 192.168.1.1 -p 22,80,443,3306
+
+Scan common ports:
+
+python3 4scan.py -t 192.168.1.1 --top-ports 100
+
+Show only open ports:
+
+python3 4scan.py -t 192.168.1.1 -p 1-1000 --open-only
+
+Export results:
+
+python3 4scan.py -t 192.168.1.1 -p 1-1000 --json results.json
+python3 4scan.py -t 192.168.1.1 -p 1-1000 --csv results.csv
+
+View available options:
+
+python3 4scan.py --help
+📋 Example
+╭──────────────────────────────────────────────╮
+│                  4SCAN                       │
+│          Lightweight TCP Scanner             │
+╰──────────────────────────────────────────────╯
 
 
-```
-## 📦 Requirements
-Python 3.x
-(No external libraries needed)
+Target  : 192.168.1.1
+Ports   : 1-1000
+Mode    : TCP Connect
 
 
-## 🧠 Example
-```bash
-Enter target IP or website: 127.0.0.1
-Start port: 20
-End port: 100
+[OPEN]  22    SSH
+[OPEN]  80    HTTP
+[OPEN]  443   HTTPS
 
-[OPEN] Port 22
-[OPEN] Port 80
-```
-## 🔐 Legal Notice
 
-This tool is for educational use only. Unauthorized scanning is illegal.
+╭────────────── Scan Summary ──────────────╮
+│ Open ports : 3                           │
+│ Duration   : 2.41s                       │
+│ Speed      : 414 ports/sec               │
+╰──────────────────────────────────────────╯
+💻 Requirements
+Python 3
+Standard Python libraries only
+No additional dependencies
+🎯 Purpose
+
+4SCAN is primarily a learning and authorized security-testing tool for practicing:
+
+Networking
+TCP/IP
+Python socket programming
+Port enumeration
+Service identification
+Security reconnaissance
+⚠️ Disclaimer
+
+Only scan systems and networks that you own or have explicit permission to test.
+
+Unauthorized port scanning may violate organizational policies, terms of service, or applicable laws.
+
+⚡ 4SCAN
+
+Learn • Scan • Analyze • Improve
+
